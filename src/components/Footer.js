@@ -26,7 +26,8 @@ function Footer() {
           <div className="footer-column footer-about">
             <Logo />
             <p className="footer-description">
-              Your trusted partner for the best flight deals and hotel bookings. We make travel affordable and unforgettable.
+              Your trusted partner for the best flight deals and hotel bookings.
+              We make travel affordable and unforgettable.
             </p>
             <div className="footer-social">
               <a
@@ -77,9 +78,6 @@ function Footer() {
                 <Link to="/hotels">Hotels</Link>
               </li>
               <li>
-                <Link to="/deals">Special Deals</Link>
-              </li>
-              <li>
                 <Link to="/airlines">Airlines</Link>
               </li>
             </ul>
@@ -95,16 +93,7 @@ function Footer() {
                 <Link to="/why-choose-us">Why Choose Us</Link>
               </li>
               <li>
-                <Link to="/careers">Careers</Link>
-              </li>
-              <li>
                 <Link to="/blog">Travel Blog</Link>
-              </li>
-              <li>
-                <Link to="/reviews">Customer Reviews</Link>
-              </li>
-              <li>
-                <Link to="/partnerships">Partnerships</Link>
               </li>
             </ul>
           </div>
@@ -120,12 +109,6 @@ function Footer() {
               </li>
               <li>
                 <Link to="/contact">Contact Us</Link>
-              </li>
-              <li>
-                <Link to="/booking-guide">Booking Guide</Link>
-              </li>
-              <li>
-                <Link to="/cancellation">Cancellation Policy</Link>
               </li>
               <li>
                 <Link to="/terms">Terms & Conditions</Link>
@@ -245,7 +228,7 @@ function Footer() {
             </a>
             <div className="trust-badge" title="ARC Accredited Agency">
               <svg viewBox="0 0 80 40" fill="none">
-                <rect width="80" height="40" rx="5" fill="#c41e3a" />
+                <rect width="80" height="40" rx="5" fill="#003d7a" />
                 <text
                   x="40"
                   y="18"

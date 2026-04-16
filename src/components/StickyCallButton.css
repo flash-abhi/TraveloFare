@@ -7,25 +7,25 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  background: linear-gradient(135deg, #DC143C, #E31C1C);
+  background:  linear-gradient(135deg, #4169e1 );
   color: #fff;
   padding: 12px 20px;
   border-radius: 50px;
   text-decoration: none;
-  box-shadow: 0 8px 30px rgba(220, 20, 60, 0.4);
+  box-shadow: 0 8px 30px rgba(0, 61, 122, 0.4);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .sticky-call-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(220, 20, 60, 0.5);
+  box-shadow: 0 12px 40px rgba(70, 20, 220, 0.5);
 }
 
 .call-pulse {
   position: absolute;
   inset: -4px;
   border-radius: 50px;
-  border: 2px solid #DC143C;
+  border: 2px solid #142fdc;
   animation: pulse-ring 2s infinite;
 }
 

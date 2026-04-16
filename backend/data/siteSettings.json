@@ -4,7 +4,7 @@
   "logoUrl": "/logo.png",
   "faviconUrl": "/favicon.png",
   "tfn": "+1-866-699-8687",
-  "email": "support@travelofareinfo.com",
+  "email": "info@travelofareinfo.com",
   "workingHours": "Mon-Sun 24/7",
   "billingAddress": {
     "company": "TraveloFare, Inc.",
@@ -24,7 +24,7 @@
   "colors": {
     "headerBg": "#ffffff",
     "headerText": "#1a202c",
-    "footerBg": "#878787",
+    "footerBg": "#333232",
     "footerText": "#ffffff"
   },
   "siteUrl": "https://travelofareinfo.com"

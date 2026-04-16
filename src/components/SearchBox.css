@@ -37,8 +37,8 @@
 
 .search-tab.active {
   background: #fff;
-  color: #DC143C;
-  border-bottom: 3px solid #DC143C;
+  color: #003d7a;
+  border-bottom: 3px solid #003d7a;
 }
 
 .search-tab:hover:not(.active) {
@@ -71,11 +71,11 @@
   width: 18px;
   height: 18px;
   cursor: pointer;
-  accent-color: #DC143C;
+  accent-color: #003d7a;
 }
 
 .trip-type-toggle label.active {
-  color: #DC143C;
+  color: #003d7a;
 }
 
 /* Search Fields Row */

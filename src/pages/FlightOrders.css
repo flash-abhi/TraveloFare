@@ -30,7 +30,7 @@
 
 .flight-orders-page {
   min-height: 100vh;
-  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+  background: linear-gradient(135deg, #e8eef7 0%, #d4dce8 100%);
   padding-bottom: 80px;
   width: 100%;
   max-width: 100vw;
@@ -39,7 +39,7 @@
 
 /* Header */
 .orders-header {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  background: linear-gradient(135deg, #003d7a 0%, #0a2a5c 50%, #001a4d 100%);
   color: white;
   padding: 60px 20px;
   text-align: center;

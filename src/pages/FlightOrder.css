@@ -1,6 +1,6 @@
 .flight-order-page {
   min-height: 100vh;
-  background: linear-gradient(135deg, #fce4e4 0%, #f5d4d4 100%);
+  background: linear-gradient(135deg, #e8eef7 0%, #d4dce8 100%);
   padding-bottom: 80px;
   width: 100%;
   max-width: 100vw;
@@ -17,7 +17,7 @@
 }
 /* Animated Header */
 .order-header {
-  background: linear-gradient(135deg, #5C1313 0%, #8B1820 50%, #991B1B 100%);
+  background: linear-gradient(135deg, #003d7a 0%, #0a2a5c 50%, #001a4d 100%);
   color: white;
   padding: 50px 0 60px;
   position: relative;
@@ -33,9 +33,9 @@
   right: 0;
   bottom: 0;
   background: 
-    linear-gradient(135deg, rgba(140, 24, 32, 0.3) 0%, transparent 50%),
-    linear-gradient(225deg, rgba(92, 19, 19, 0.3) 0%, transparent 50%),
-    linear-gradient(45deg, rgba(153, 27, 27, 0.2) 0%, transparent 40%);
+    linear-gradient(135deg, rgba(0, 61, 122, 0.3) 0%, transparent 50%),
+    linear-gradient(225deg, rgba(0, 26, 77, 0.3) 0%, transparent 50%),
+    linear-gradient(45deg, rgba(0, 61, 122, 0.2) 0%, transparent 40%);
   animation: pulseGlow 8s ease-in-out infinite;
 }
 
@@ -61,13 +61,13 @@
 .header-icon {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, #991B1B 0%, #5C1313 100%);
+  background: linear-gradient(135deg, #001a4d 0%, #003d7a 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 24px;
-  box-shadow: 0 12px 40px rgba(153, 27, 27, 0.6);
+  box-shadow: 0 12px 40px rgba(0, 61, 122, 0.6);
   animation: floatIcon 3s ease-in-out infinite;
   flex-shrink: 0;
 }
@@ -192,9 +192,9 @@
 }
 
 .step.active .step-number {
-  background: linear-gradient(135deg, #991B1B 0%, #5C1313 100%);
+  background: linear-gradient(135deg, #001a4d 0%, #003d7a 100%);
   border-color: transparent;
-  box-shadow: 0 10px 30px rgba(153, 27, 27, 0.7);
+  box-shadow: 0 10px 30px rgba(0, 61, 122, 0.7);
   transform: scale(1.15);
 }
 
@@ -313,7 +313,7 @@
 .section-icon {
   width: 56px;
   height: 56px;
-  background: linear-gradient(135deg, #991B1B 0%, #5C1313 100%);
+  background: linear-gradient(135deg, #001a4d 0%, #003d7a 100%);
   border-radius: 16px;
   display: flex;
   align-items: center;
@@ -370,7 +370,7 @@
 }
 
 .passenger-badge svg {
-  color: #991B1B;
+  color: #001a4d;
 }
 
 .passenger-type-badge {
@@ -451,8 +451,8 @@
 .form-group input:focus,
 .form-group select:focus {
   outline: none;
-  border-color: #991B1B;
-  box-shadow: 0 0 0 4px rgba(153, 27, 27, 0.15);
+  border-color: #001a4d;
+  box-shadow: 0 0 0 4px rgba(0, 61, 122, 0.15);
 }
 
 .form-group input.filled {
@@ -578,13 +578,13 @@
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #991B1B 0%, #5C1313 100%);
+  background: linear-gradient(135deg, #001a4d 0%, #003d7a 100%);
   color: black;
   display: flex;
   gap: 10px ;
   margin: 4px;
   justify-content: space-around;
-  box-shadow: 0 4px 15px rgba(153, 27, 27, 0.4);
+  box-shadow: 0 4px 15px rgba(0, 61, 122, 0.4);
 }
 
 
@@ -605,7 +605,7 @@
 
 .btn-primary:hover:not(:disabled) {
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(153, 27, 27, 0.6);
+  box-shadow: 0 10px 30px rgba(0, 61, 122, 0.6);
 }
 
 .btn-primary:active:not(:disabled) {
@@ -640,8 +640,8 @@
 }
 
 .btn-secondary:hover {
-  border-color: #991B1B;
-  color: #991B1B;
+  border-color: #001a4d;
+  color: #001a4d;
   background: linear-gradient(135deg, #f8f9ff 0%, #fff 100%);
   transform: translateY(-2px);
 }
@@ -667,7 +667,7 @@
 }
 
 .btn-skip:hover {
-  color: #991B1B;
+  color: #001a4d;
   background: linear-gradient(135deg, #f8f9ff 0%, #fff 100%);
 }
 
@@ -720,7 +720,7 @@
 }
 
 .summary-card:hover {
-  box-shadow: 0 8px 24px rgba(153, 27, 27, 0.12);
+  box-shadow: 0 8px 24px rgba(0, 61, 122, 0.12);
 }
 
 .flight-card {
@@ -737,7 +737,7 @@
 }
 
 .price-container:hover {
-  box-shadow: 0 8px 24px rgba(153, 27, 27, 0.12);
+  box-shadow: 0 8px 24px rgba(0, 61, 122, 0.12);
 }
 
 .travelers-card {
@@ -771,7 +771,7 @@
 }
 
 .flight-summary:hover {
-  box-shadow: 0 4px 12px rgba(153, 27, 27, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 61, 122, 0.1);
 }
 
 .flight-label {
@@ -779,7 +779,7 @@
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
-  background: linear-gradient(135deg, #991B1B 0%, #5C1313 100%);
+  background: linear-gradient(135deg, #001a4d 0%, #003d7a 100%);
   color: white;
   padding: 4px 12px;
   border-radius: 20px;
@@ -810,7 +810,7 @@
 .airport-code {
   font-size: 18px;
   font-weight: 700;
-  color: #991B1B;
+  color: #001a4d;
   letter-spacing: -0.5px;
   line-height: 1;
 }
@@ -830,7 +830,7 @@
   justify-content: center;
   flex: 0 0 50px;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #991B1B, transparent);
+  background: linear-gradient(90deg, transparent, #001a4d, transparent);
   position: relative;
 }
 
@@ -840,7 +840,7 @@
   background: white;
   width: 24px;
   height: 24px;
-  color: #991B1B;
+  color: #001a4d;
   padding: 2px;
 }
 
@@ -866,7 +866,7 @@
 }
 
 .meta-item svg {
-  color: #991B1B;
+  color: #001a4d;
   flex-shrink: 0;
 }
 
@@ -901,7 +901,7 @@
 }
 
 .summary-header svg {
-  color: #991B1B;
+  color: #001a4d;
   flex-shrink: 0;
 }
 
@@ -936,11 +936,11 @@
 .traveler-row:hover {
   background: linear-gradient(135deg, #ffe0e0 0%, #ffd4d4 100%);
   border-color: #ff9999;
-  box-shadow: 0 4px 12px rgba(153, 27, 27, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 61, 122, 0.15);
 }
 
 .traveler-row svg {
-  color: #991B1B;
+  color: #001a4d;
   flex-shrink: 0;
 }
 
@@ -1002,7 +1002,7 @@
 }
 
 .promo-input svg {
-  color: #991B1B;
+  color: #001a4d;
   flex-shrink: 0;
 }
 
@@ -1017,13 +1017,13 @@
 
 .promo-input input:focus {
   outline: none;
-  border-color: #991B1B;
-  box-shadow: 0 0 0 3px rgba(153, 27, 27, 0.1);
+  border-color: #001a4d;
+  box-shadow: 0 0 0 3px rgba(0, 61, 122, 0.1);
 }
 
 .promo-input button {
   padding: 8px 14px;
-  background: linear-gradient(135deg, #991B1B 0%, #5C1313 100%);
+  background: linear-gradient(135deg, #001a4d 0%, #003d7a 100%);
   color: white;
   border: none;
   border-radius: 8px;
@@ -1035,7 +1035,7 @@
 }
 
 .promo-input button:hover:not(:disabled) {
-  box-shadow: 0 4px 12px rgba(153, 27, 27, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 61, 122, 0.3);
   transform: translateY(-2px);
 }
 
@@ -1050,7 +1050,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 16px 0;
-  border-top: 2px solid #991B1B;
+  border-top: 2px solid #001a4d;
   border-bottom: 1px solid #f0e0e0;
   margin-bottom: 12px;
 }
@@ -1076,7 +1076,7 @@
 .amount {
   font-size: 24px;
   font-weight: 700;
-  color: #991B1B;
+  color: #001a4d;
 }
 
 /* Price Note */
@@ -1116,7 +1116,7 @@
 .route-code {
   font-size: 26px;
   font-weight: 700;
-  color: #991B1B;
+  color: #001a4d;
   letter-spacing: -0.5px;
 }
 
@@ -1144,7 +1144,7 @@
 }
 
 .detail-item svg {
-  color: #991B1B;
+  color: #001a4d;
 }
 
 .summary-section {
@@ -1169,19 +1169,19 @@
 }
 
 .seat-badge {
-  background: linear-gradient(135deg, #991B1B 0%, #5C1313 100%);
+  background: linear-gradient(135deg, #001a4d 0%, #003d7a 100%);
   color: white;
   padding: 8px 14px;
   border-radius: 8px;
   font-size: 13px;
   font-weight: 600;
-  box-shadow: 0 2px 8px rgba(153, 27, 27, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 61, 122, 0.3);
   transition: all 0.3s ease;
 }
 
 .seat-badge:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(153, 27, 27, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 61, 122, 0.4);
 }
 
 /* Pricing Section */
@@ -1207,7 +1207,7 @@
 }
 
 .price-row.total {
-  border-top: 2px solid #991B1B;
+  border-top: 2px solid #001a4d;
   border-bottom: none;
   margin-top: 12px;
   padding-top: 16px;
@@ -1217,7 +1217,7 @@
 }
 
 .price-row.total span:last-child {
-  color: #991B1B;
+  color: #001a4d;
 }
 
 .summary-note {
@@ -1919,7 +1919,7 @@
 
 .seat-card {
   background: white;
-  border: 2px solid #991B1B;
+  border: 2px solid #001a4d;
   border-radius: 12px;
   padding: 20px 16px;
   display: flex;
@@ -1927,18 +1927,18 @@
   align-items: center;
   gap: 10px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(153, 27, 27, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 61, 122, 0.1);
 }
 
 .seat-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(153, 27, 27, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 61, 122, 0.2);
 }
 
 .seat-number {
   font-size: 28px;
   font-weight: 700;
-  color: #991B1B;
+  color: #001a4d;
   letter-spacing: -0.5px;
 }
 
@@ -2025,14 +2025,14 @@
   width: 36px;
   height: 36px;
   border-radius: 10px;
-  background: linear-gradient(135deg, #991B1B 0%, #5C1313 100%);
+  background: linear-gradient(135deg, #001a4d 0%, #003d7a 100%);
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 16px;
   font-weight: 700;
-  box-shadow: 0 2px 8px rgba(153, 27, 27, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 61, 122, 0.3);
 }
 
 .fare-rule-content {

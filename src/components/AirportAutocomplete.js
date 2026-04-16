@@ -89,13 +89,7 @@ function AirportAutocomplete({ value, onChange, placeholder }) {
           id='airport-input'
           autoComplete="off"
         />
-        {inputValue && (
-          <X 
-            size={18} 
-            className="clear-icon" 
-            onClick={handleClear}
-          />
-        )}
+        
       </div>
       
       {showSuggestions && suggestions.length > 0 && (

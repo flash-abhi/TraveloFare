@@ -21,7 +21,7 @@
 .passenger-display:active,
 .passenger-selector:has(.passenger-dropdown) .passenger-display {
   background: white;
-  box-shadow: 0 0 0 2px #DC143C;
+  box-shadow: 0 0 0 2px #003d7a;
 }
 
 .passenger-text {

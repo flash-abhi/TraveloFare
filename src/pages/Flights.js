@@ -282,7 +282,14 @@ function Flights() {
     <div className="flights-page">
       
       <div className="hero-section">
-        <div className="container">
+        <div className="hero-flights">
+          <div className="flight-plane flight-plane-1">✈️</div>
+          <div className="flight-plane flight-plane-2">✈️</div>
+          <div className="flight-plane flight-plane-3">✈️</div>
+          <div className="flight-plane flight-plane-4">✈️</div>
+          <div className="flight-plane flight-plane-5">✈️</div>
+        </div>
+        <div className="container" style={{position: 'relative', zIndex: 10}}>
           <h1><Plane size={40} /> Find Your Perfect Flight</h1>
           <p>Search and compare flights from hundreds of airlines</p>
         </div>
@@ -315,7 +322,7 @@ function Flights() {
 
             {/* Search Form */}
             <form onSubmit={handleSearch}>
-              <div className="search-fields-grid">
+              <div className="search-field-grid">
                 {/* From */}
                 <div className="search-field">
                   <label>From</label>
@@ -349,7 +356,6 @@ function Flights() {
                 <div className="search-field">
                   <label>Depart</label>
                   <div className="input-with-icon" onClick={() => departDateRef.current?.showPicker?.()}>
-                    <Calendar size={18} />
                     <input
                       ref={departDateRef}
                       type="date"
@@ -368,7 +374,6 @@ function Flights() {
                   <div className="search-field">
                     <label>Return</label>
                     <div className="input-with-icon" onClick={() => returnDateRef.current?.showPicker?.()}>
-                      <Calendar size={18} />
                       <input
                         ref={returnDateRef}
                         type="date"
@@ -440,7 +445,6 @@ function Flights() {
                 <div className="search-field">
                   <label>Cabin Class</label>
                   <div className="input-with-icon">
-                    <Star size={18} />
                     <select
                      id="airport-input"
                       value={searchData.cabinClass}

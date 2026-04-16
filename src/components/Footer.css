@@ -73,11 +73,11 @@
 }
 
 .social-link:hover {
-  background: #DC143C;
+  background: #003d7a;
   color: #FFFFFF;
-  border-color: #DC143C;
+  border-color: #003d7a;
   transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(220, 20, 60, 0.2);
+  box-shadow: 0 6px 16px rgba(0, 61, 122, 0.2);
 }
 
 .footer-heading {
@@ -108,7 +108,7 @@
 }
 
 .footer-links li a:hover {
-  color: #DC143C;
+  color: #003d7a;
   opacity: 1;
   transform: translateX(4px);
 }
@@ -132,7 +132,7 @@
 .footer-contact-list li svg {
   flex-shrink: 0;
   margin-top: 2px;
-  color: #DC143C;
+  color: #003d7a;
   stroke-width: 2.5;
 }
 
@@ -151,7 +151,7 @@
 }
 
 .contact-link:hover {
-  color: #DC143C;
+  color: #003d7a;
 }
 
 .contact-text {
@@ -216,15 +216,15 @@
 }
 
 .newsletter-input:focus {
-  border-color: #DC143C;
+  border-color: #003d7a;
   background: #FFFFFF;
   color: #000000;
-  box-shadow: 0 0 0 3px rgba(220, 20, 60, 0.08);
+  box-shadow: 0 0 0 3px rgba(0, 61, 122, 0.08);
 }
 
 .newsletter-button {
   padding: 12px 28px;
-  background: #DC143C;
+  background: #003d7a;
   color: white;
   border: none;
   border-radius: 8px;
@@ -236,9 +236,9 @@
 }
 
 .newsletter-button:hover {
-  background: #8B0000;
+  background: #003d7a;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(220, 20, 60, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 61, 122, 0.3);
 }
 
 /* Trust & Payment Badges */
@@ -306,14 +306,14 @@
 }
 
 .copyright-legal a {
-  color: #DC143C;
+  color: #003d7a;
   text-decoration: none;
   transition: color 0.3s;
   font-weight: 500;
 }
 
 .copyright-legal a:hover {
-  color: #8B0000;
+  color: #003d7a;
 }
 
 /* Responsive Design */

@@ -17,7 +17,7 @@
 .hero-background {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  background: linear-gradient(135deg, #003d7a 0%, #001a4d 50%, #000d26 100%);
 }
 
 .hero-background::before {

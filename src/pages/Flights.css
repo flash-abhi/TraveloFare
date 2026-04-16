@@ -6,8 +6,137 @@
 .hero-section {
   padding: 48px 20px 32px;
   text-align: center;
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  background: linear-gradient(135deg, #003d7a 0%, #001a4d 100%);
   color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-flights {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.flight-plane {
+  position: absolute;
+  font-size: 56px;
+  opacity: 0.5;
+  filter: drop-shadow(0 4px 12px rgba(0, 61, 122, 0.4)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.15));
+  text-shadow: 0 0 20px rgba(0, 61, 122, 0.6), 0 0 40px rgba(255, 255, 255, 0.2);
+}
+
+.flight-plane-1 {
+  top: 12%;
+  animation: flyAcross 18s ease-in-out infinite, planeWobble 4s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+.flight-plane-2 {
+  top: 32%;
+  animation: flyAcrossReverse 22s ease-in-out infinite, planeBob 3.5s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.flight-plane-3 {
+  top: 52%;
+  animation: flyAcross 20s ease-in-out infinite, planeSway 5s ease-in-out infinite;
+  animation-delay: 4s;
+}
+
+.flight-plane-4 {
+  top: 72%;
+  animation: flyAcrossReverse 24s ease-in-out infinite, planeWobble 4.2s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.flight-plane-5 {
+  top: 22%;
+  animation: flyAcross 21s ease-in-out infinite, planeBob 3.8s ease-in-out infinite;
+  animation-delay: 5s;
+}
+
+@keyframes flyAcross {
+  0% {
+    left: -100px;
+    opacity: 0;
+    transform: scale(0.7) rotateY(25deg);
+  }
+  8% {
+    opacity: 0.5;
+    transform: scale(1) rotateY(0deg);
+  }
+  92% {
+    opacity: 0.5;
+    transform: scale(1) rotateY(0deg);
+  }
+  100% {
+    left: calc(100vw + 100px);
+    opacity: 0;
+    transform: scale(0.7) rotateY(-25deg);
+  }
+}
+
+@keyframes flyAcrossReverse {
+  0% {
+    right: -100px;
+    opacity: 0;
+    transform: scale(0.7) rotateY(-25deg) scaleX(-1);
+  }
+  8% {
+    opacity: 0.5;
+    transform: scale(1) rotateY(0deg) scaleX(-1);
+  }
+  92% {
+    opacity: 0.5;
+    transform: scale(1) rotateY(0deg) scaleX(-1);
+  }
+  100% {
+    right: calc(100vw + 100px);
+    opacity: 0;
+    transform: scale(0.7) rotateY(25deg) scaleX(-1);
+  }
+}
+
+@keyframes planeWobble {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-12px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(12px);
+  }
+}
+
+@keyframes planeBob {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes planeSway {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(8px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(-8px);
+  }
 }
 
 .hero-section h1 {
@@ -21,7 +150,7 @@
 }
 
 .hero-section h1 svg {
-  color: #DC143C;
+  color: #003d7a;
 }
 
 .hero-section p {
@@ -82,13 +211,13 @@
 }
 
 .trip-type-selector label:has(input[type="radio"][value="round-trip"]:checked) {
-  color: #DC143C;
-  border-bottom: 3px solid #DC143C;
+  color: #003d7a;
+  border-bottom: 3px solid #003d7a;
 }
 
 .trip-type-selector label:has(input[type="radio"][value="one-way"]:checked) {
-  color: #DC143C;
-  border-bottom: 3px solid #DC143C;
+  color: #003d7a;
+  border-bottom: 3px solid #003d7a;
 }
 
 .trip-type-selector input[type="radio"] {
@@ -98,17 +227,17 @@
 }
 
 .trip-type-selector input[type="radio"][value="round-trip"] {
-  accent-color: #DC143C;
+  accent-color: #003d7a;
 }
 
 .trip-type-selector input[type="radio"][value="one-way"] {
-  accent-color: #DC143C;
+  accent-color: #003d7a;
 }
 
 /* Search Form Grid */
-.search-fields-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 50px 1.2fr 1fr 1fr 1fr 1fr;
+.search-field-grid {
+  display: flex;
+  flex-wrap: wrap;
   gap: 16px;
   margin-bottom: 20px;
   align-items: end;
@@ -140,7 +269,7 @@
 .input-with-icon > svg {
   position: absolute;
   left: 14px;
-  color: #DC143C;
+  color: #003d7a;
   pointer-events: none;
   z-index: 1;
   stroke-width: 2.5;
@@ -167,9 +296,9 @@
 .input-with-icon input:focus,
 .input-with-icon select:focus {
   outline: none;
-  border-color: #DC143C;
+  border-color: #003d7a;
   background: white;
-  box-shadow: 0 0 0 3px rgba(220, 20, 60, 0.08);
+  box-shadow: 0 0 0 3px rgba(0, 61, 122, 0.08);
 }
 
 .input-with-icon select {
@@ -180,7 +309,7 @@
 
 /* Swap Button */
 .swap-btn {
-  background: #DC143C;
+  background: #003d7a;
   color: white;
   border: none;
   border-radius: 8px;
@@ -196,9 +325,9 @@
 }
 
 .swap-btn:hover {
-  background: #8B0000;
+  background: #001a4d;
   transform: rotate(180deg);
-  box-shadow: 0 4px 12px rgba(220, 20, 60, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 61, 122, 0.3);
 }
 
 /* Passenger Dropdown */
@@ -229,14 +358,14 @@
 }
 
 .passengers-summary:hover {
-  border-color: #DC143C;
+  border-color: #003d7a;
   background: #f0f0f0;
 }
 
 .passengers-summary svg {
   position: absolute;
   left: 14px;
-  color: #DC143C;
+  color: #003d7a;
   flex-shrink: 0;
 }
 
@@ -299,7 +428,7 @@
   cursor: pointer;
   font-size: 16px;
   font-weight: 700;
-  color: #DC143C;
+  color: #003d7a;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -307,9 +436,9 @@
 }
 
 .passenger-controls button:hover:not(:disabled) {
-  background: #DC143C;
+  background: #003d7a;
   color: white;
-  border-color: #DC143C;
+  border-color: #003d7a;
 }
 
 .passenger-controls button:disabled {
@@ -343,24 +472,27 @@
   font-weight: 500;
   color: #1a1a1a;
 }
-
+.from-to{
+  display: flex;
+  gap: 20px;
+}
 .direct-flights-checkbox input[type="checkbox"] {
   width: 18px;
   height: 18px;
   cursor: pointer;
-  accent-color: #DC143C;
+  accent-color: #003d7a;
 }
 .search-button{
   color: white;
 }
 .search-button:hover{
-  background-color: #dc143cc2 ;
+  background-color: #003d7a ;
   border: none;
 }
 /* Search Button */
 .search-flights-btn {
   padding: 12px 28px;
-  background: #DC143C !important;
+  background: #003d7a !important;
   color: white !important;
   border: none !important;
   border-radius: 8px;
@@ -377,9 +509,9 @@
 }
 
 .search-flights-btn:hover {
-  background: #8B0000 !important;
+  background: #001a4d !important;
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(220, 20, 60, 0.3);
+  box-shadow: 0 6px 16px rgba(0, 61, 122, 0.3);
 }
 
 .search-flights-btn:active {
@@ -415,8 +547,8 @@
 
 .trust-badge:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 20px rgba(220, 20, 60, 0.1);
-  border-color: #DC143C;
+  box-shadow: 0 6px 20px rgba(0, 61, 122, 0.1);
+  border-color: #003d7a;
 }
 
 .badge-icon {
@@ -462,7 +594,7 @@
 }
 
 .section-header h2 svg {
-  color: #DC143C;
+  color: #003d7a;
 }
 
 .section-header p {
@@ -493,8 +625,8 @@
 
 .route-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(220, 20, 60, 0.12);
-  border-color: #DC143C;
+  box-shadow: 0 8px 20px rgba(0, 61, 122, 0.12);
+  border-color: #003d7a;
 }
 
 .route-header {
@@ -519,7 +651,7 @@
 }
 
 .route-icon {
-  color: #DC143C;
+  color: #003d7a;
   flex-shrink: 0;
 }
 
@@ -589,7 +721,7 @@
 .price {
   font-size: 24px;
   font-weight: 800;
-  color: #DC143C;
+  color: #003d7a;
   line-height: 1;
 }
 
@@ -602,7 +734,7 @@
 .view-flights-btn {
   width: 100%;
   padding: 10px 20px;
-  background: #DC143C;
+  background: #003d7a;
   color: white;
   border: none;
   border-radius: 8px;
@@ -613,9 +745,9 @@
 }
 
 .view-flights-btn:hover {
-  background: #8B0000;
+  background: #001a4d;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(220, 20, 60, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 61, 122, 0.3);
 }
 
 .view-flights-btn:active {
@@ -651,8 +783,8 @@
 
 .review-card:hover {
   transform: translateY(-4px);
-  border-color: #DC143C;
-  box-shadow: 0 6px 16px rgba(220, 20, 60, 0.08);
+  border-color: #003d7a;
+  box-shadow: 0 6px 16px rgba(0, 61, 122, 0.08);
 }
 
 .review-header {
@@ -673,7 +805,7 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #DC143C 0%, #8B0000 100%);
+  background: linear-gradient(135deg, #003d7a 0%, #001a4d 100%);
   color: white;
   display: flex;
   align-items: center;
@@ -717,7 +849,7 @@
   position: absolute;
   top: -4px;
   left: -8px;
-  color: #DC143C;
+  color: #003d7a;
   opacity: 0.15;
 }
 

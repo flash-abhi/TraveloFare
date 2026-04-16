@@ -181,6 +181,13 @@ function HomeNew() {
               <div key={i} className={`particle particle-${i + 1}`}></div>
             ))}
           </div>
+          <div className="hero-flights">
+            <div className="flight-plane flight-plane-1">✈️</div>
+            <div className="flight-plane flight-plane-2">✈️</div>
+            <div className="flight-plane flight-plane-3">✈️</div>
+            <div className="flight-plane flight-plane-4">✈️</div>
+            <div className="flight-plane flight-plane-5">✈️</div>
+          </div>
         </div>
 
         <div className="hero-inner container">
@@ -196,7 +203,8 @@ function HomeNew() {
             </h1>
 
             <p className="hero-subtitle scroll-animate">
-              Find the best flights and hotels at unbeatable prices. Book now and save up to 50% on your next trip.
+              Find the best flights and hotels at unbeatable prices. Book now
+              and save up to 50% on your next trip.
             </p>
           </div>
 
@@ -236,9 +244,7 @@ function HomeNew() {
                     </div>
                     <div className="search-grid flights-grid">
                       <div className="search-field route-field">
-                        <label>
-                           From
-                        </label>
+                        <label>From</label>
                         <AirportAutocomplete
                           value={searchData.from}
                           onChange={(value) =>
@@ -257,12 +263,10 @@ function HomeNew() {
                           })
                         }
                       >
-                        <ArrowLeftRight color='red'  size={18} />
+                        <ArrowLeftRight color="red" size={18} />
                       </button>
                       <div className="search-field route-field">
-                        <label>
-                          To
-                        </label>
+                        <label>To</label>
                         <AirportAutocomplete
                           value={searchData.to}
                           onChange={(value) =>
@@ -272,9 +276,7 @@ function HomeNew() {
                         />
                       </div>
                       <div className="search-field">
-                        <label>
-                         Depart
-                        </label>
+                        <label>Depart</label>
                         <input
                           type="date"
                           value={searchData.departDate}
@@ -289,9 +291,7 @@ function HomeNew() {
                       </div>
                       {tripType === "roundtrip" && (
                         <div className="search-field">
-                          <label>
-                            Return
-                          </label>
+                          <label>Return</label>
                           <input
                             type="date"
                             value={searchData.returnDate}
@@ -309,9 +309,7 @@ function HomeNew() {
                         </div>
                       )}
                       <div className="search-field travelers-field">
-                        <label>
-                         Travelers
-                        </label>
+                        <label>Travelers</label>
                         <div
                           className="travelers-trigger"
                           onClick={() => setShowPassengers(!showPassengers)}
@@ -409,9 +407,7 @@ function HomeNew() {
                 {activeTab === "hotels" && (
                   <div className="search-grid hotels-grid">
                     <div className="search-field">
-                      <label>
-                        Destination
-                      </label>
+                      <label>Destination</label>
                       <input
                         type="text"
                         placeholder="City or Hotel Name"
@@ -423,7 +419,7 @@ function HomeNew() {
                     </div>
                     <div className="search-field">
                       <label>
-                        <Calendar size={14} /> Check-in
+                       Check-in
                       </label>
                       <input
                         type="date"
@@ -439,7 +435,7 @@ function HomeNew() {
                     </div>
                     <div className="search-field">
                       <label>
-                        <Calendar size={14} /> Check-out
+                        Check-out
                       </label>
                       <input
                         type="date"
@@ -458,7 +454,7 @@ function HomeNew() {
                     </div>
                     <div className="search-field">
                       <label>
-                        <Users size={14} /> Guests
+                        <Users className="icon" size={16} /> Guests
                       </label>
                       <div
                         className="travelers-trigger"
@@ -630,7 +626,7 @@ function HomeNew() {
                 <div className="route-content">
                   <div className="route-header">
                     <div>
-                      <div className="route-from" >{route.from}</div>
+                      <div className="route-from">{route.from}</div>
                       <div className="route-code">{route.fromCode}</div>
                     </div>
                     <div className="route-duration">
@@ -677,18 +673,29 @@ function HomeNew() {
                         <Star
                           key={i}
                           size={14}
-                          fill={i < Math.floor(deal.rating) ? "#f59e0b" : "#e5e7eb"}
-                          stroke={i < Math.floor(deal.rating) ? "#f59e0b" : "#e5e7eb"}
+                          fill={
+                            i < Math.floor(deal.rating) ? "#f59e0b" : "#e5e7eb"
+                          }
+                          stroke={
+                            i < Math.floor(deal.rating) ? "#f59e0b" : "#e5e7eb"
+                          }
                         />
                       ))}
                     </div>
                     <span className="review-count">({deal.reviews})</span>
                   </div>
                   <div className="price-comparison">
-                    <span className="original-price">${deal.originalPrice}</span>
+                    <span className="original-price">
+                      ${deal.originalPrice}
+                    </span>
                     <span className="current-price">${deal.price}</span>
                     <span className="discount">
-                      {Math.round(((deal.originalPrice - deal.price) / deal.originalPrice) * 100)}% OFF
+                      {Math.round(
+                        ((deal.originalPrice - deal.price) /
+                          deal.originalPrice) *
+                          100,
+                      )}
+                      % OFF
                     </span>
                   </div>
                 </div>
@@ -795,8 +802,6 @@ function HomeNew() {
           </div>
         </div>
       </section>
-
-      
     </div>
   );
 }

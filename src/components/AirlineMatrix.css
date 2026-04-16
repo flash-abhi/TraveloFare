@@ -12,7 +12,7 @@
 }
 
 .airline-matrix-loading .loading-icon {
-  color: #DC143C;
+  color: #003d7a;
   animation: bounce 1s infinite;
   margin-bottom: 15px;
 }
@@ -47,13 +47,13 @@
 }
 
 .alliance-filters button:hover {
-  border-color: #DC143C;
-  color: #DC143C;
+  border-color: #003d7a;
+  color: #003d7a;
 }
 
 .alliance-filters button.active {
-  background: linear-gradient(135deg, #DC143C 0%, #E31C1C 100%);
-  border-color: #DC143C;
+  background: linear-gradient(135deg, #003d7a 0%, #001a4d 100%);
+  border-color: #003d7a;
   color: white;
 }
 

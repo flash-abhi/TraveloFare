@@ -76,8 +76,8 @@ function Terms() {
                 fees.
               </li>
               <li>
-                Cancellation requests must be submitted in writing to
-                support@travelofareinfo.com
+                Cancellation requests must be submitted in writing to 
+                 &nbsp; {contactSettings.email}
               </li>
               <li>Processing time for refunds may take 7-14 business days.</li>
             </ul>
@@ -180,7 +180,7 @@ function Terms() {
             <p>Our 24/7 customer support is available at:</p>
             <ul>
               <li>Phone: {contactSettings.tfn}</li>
-              <li>Email: support@travelofareinfo.com</li>
+              <li>Email: {contactSettings.email}</li>
             </ul>
           </section>
 
@@ -206,7 +206,7 @@ function Terms() {
             <h2>12. Contact Information</h2>
             <p>For questions about these terms:</p>
             <ul>
-              <li>Email: legal@travelofareinfo.com</li>
+              <li>Email: {contactSettings.email}</li>
               <li>Phone: {contactSettings.tfn}</li>
             </ul>
           </section>

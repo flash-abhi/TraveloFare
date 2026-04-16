@@ -37,6 +37,9 @@ import BlogPost from "./pages/BlogPost";
 import Blog from "./pages/Blog";
 // import AirlineLogos from './components/AirlineLogos';
 import "./App.css";
+import AirlinesNew from './pages/AirlinesNew';
+import AirlinePageNew from './pages/AirlinePageNew';
+import WhyChooseUs from './pages/WhyChooseUs';
 
 let socket = null;
 
@@ -86,8 +89,8 @@ function AppContent() {
         <Route path="/hotels" element={<Hotels />} />
         <Route path="/hotel-results" element={<HotelResults />} />
         <Route path="/hotel-details" element={<HotelDetails />} />
-        <Route path="/airlines" element={<AirlinesDirectory />} />
-        <Route path="/airlines/:airlineSlug" element={<AirlinePage />} />
+        <Route path="/airlines" element={<AirlinesNew />} />
+        <Route path="/airlines/:airlineSlug" element={<AirlinePageNew  />} />
         <Route path="/airline-customer-service" element={<AirlineSupport />} />
         <Route
           path="/airline-customer-service-number"
@@ -105,6 +108,7 @@ function AppContent() {
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path='why-choose-us' element={<WhyChooseUs />} />
       </Routes>
       {!isAdminRoute && <StickyCallButton />}
       {!isAdminRoute && <FloatingCallBanner />}
@@ -125,3 +129,6 @@ function App() {
 }
 
 export default App;
+
+
+// linear-gradient(135deg, #4169e1 0%, #9a2121 100%);

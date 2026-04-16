@@ -21,7 +21,7 @@
 .bg-gradient {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(220, 20, 60, 0.1) 0%, rgba(26, 26, 26, 0.8) 100%);
+  background: linear-gradient(180deg, rgba(0, 61, 122, 0.1) 0%, rgba(26, 26, 26, 0.8) 100%);
   z-index: 1;
 }
 
@@ -40,7 +40,7 @@
 .shape-1 {
   width: 300px;
   height: 300px;
-  background: #DC143C;
+  background: #003d7a;
   top: -100px;
   left: -100px;
   animation: float 15s infinite ease-in-out;
@@ -49,7 +49,7 @@
 .shape-2 {
   width: 200px;
   height: 200px;
-  background: #E31C1C;
+  background: #003d7a;
   top: 50%;
   right: -50px;
   animation: float 20s infinite ease-in-out 2s;
@@ -58,7 +58,7 @@
 .shape-3 {
   width: 250px;
   height: 250px;
-  background: #DC143C;
+  background: #003d7a;
   bottom: -100px;
   left: 20%;
   animation: float 18s infinite ease-in-out 1s;
@@ -67,7 +67,7 @@
 .shape-4 {
   width: 150px;
   height: 150px;
-  background: #E31C1C;
+  background: #003d7a;
   top: 30%;
   right: 10%;
   animation: float 22s infinite ease-in-out 3s;
@@ -90,7 +90,7 @@
 
 .float-icon {
   position: absolute;
-  color: rgba(220, 20, 60, 0.1);
+  color: rgba(0, 61, 122, 0.1);
   opacity: 0.3;
   animation: float-icon 8s infinite ease-in-out;
 }
@@ -117,6 +117,134 @@
   }
 }
 
+/* ===== FLIGHTS ANIMATION ===== */
+.hero-flights {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.flight-plane {
+  position: absolute;
+  font-size: 56px;
+  opacity: 0.5;
+  filter: drop-shadow(0 4px 12px rgba(139, 0, 0, 0.4)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.15));
+  text-shadow: 0 0 20px rgba(139, 0, 0, 0.6), 0 0 40px rgba(255, 255, 255, 0.2);
+}
+
+.flight-plane-1 {
+  top: 12%;
+  animation: flyAcross 18s ease-in-out infinite, planeWobble 4s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+.flight-plane-2 {
+  top: 32%;
+  animation: flyAcrossReverse 22s ease-in-out infinite, planeBob 3.5s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.flight-plane-3 {
+  top: 52%;
+  animation: flyAcross 20s ease-in-out infinite, planeSway 5s ease-in-out infinite;
+  animation-delay: 4s;
+}
+
+.flight-plane-4 {
+  top: 72%;
+  animation: flyAcrossReverse 24s ease-in-out infinite, planeWobble 4.2s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.flight-plane-5 {
+  top: 22%;
+  animation: flyAcross 21s ease-in-out infinite, planeBob 3.8s ease-in-out infinite;
+  animation-delay: 5s;
+}
+
+@keyframes flyAcross {
+  0% {
+    left: -100px;
+    opacity: 0;
+    transform: scale(0.7) rotateY(25deg);
+  }
+  8% {
+    opacity: 0.5;
+    transform: scale(1) rotateY(0deg);
+  }
+  92% {
+    opacity: 0.5;
+    transform: scale(1) rotateY(0deg);
+  }
+  100% {
+    left: calc(100vw + 100px);
+    opacity: 0;
+    transform: scale(0.7) rotateY(-25deg);
+  }
+}
+
+@keyframes flyAcrossReverse {
+  0% {
+    right: -100px;
+    opacity: 0;
+    transform: scale(0.7) rotateY(-25deg) scaleX(-1);
+  }
+  8% {
+    opacity: 0.5;
+    transform: scale(1) rotateY(0deg) scaleX(-1);
+  }
+  92% {
+    opacity: 0.5;
+    transform: scale(1) rotateY(0deg) scaleX(-1);
+  }
+  100% {
+    right: calc(100vw + 100px);
+    opacity: 0;
+    transform: scale(0.7) rotateY(25deg) scaleX(-1);
+  }
+}
+
+@keyframes planeWobble {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-12px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(12px);
+  }
+}
+
+@keyframes planeBob {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes planeSway {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(8px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(-8px);
+  }
+}
+
 .coming-soon-container {
   position: relative;
   z-index: 10;
@@ -131,10 +259,10 @@
   align-items: center;
   gap: 10px;
   background: rgba(220, 20, 60, 0.2);
-  border: 1.5px solid #DC143C;
+  border: 1.5px solid #003d7a;
   padding: 12px 24px;
   border-radius: 50px;
-  color: #DC143C;
+  color: #003d7a;
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 24px;
@@ -153,7 +281,7 @@
 }
 
 .coming-soon-title .highlight {
-  color: #DC143C;
+  color: #003d7a;
   display: block;
   margin-top: 8px;
 }
@@ -201,13 +329,13 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, #DC143C 0%, #E31C1C 100%);
+  background: linear-gradient(90deg, #003d7a 0%, #001a4d 100%);
 }
 
 .feature-icon {
   width: 64px;
   height: 64px;
-  background: linear-gradient(135deg, #DC143C 0%, #E31C1C 100%);
+  background: linear-gradient(135deg, #003d7a 0%, #003d7a 100%);
   border-radius: 16px;
   display: flex;
   align-items: center;
@@ -219,7 +347,7 @@
 
 .feature-item:hover {
   background: rgba(220, 20, 60, 0.15);
-  border-color: #DC143C;
+  border-color: #003d7a;
   transform: translateY(-8px);
   box-shadow: 0 12px 40px rgba(220, 20, 60, 0.3);
 }
@@ -267,14 +395,14 @@
 }
 
 .input-wrapper:focus-within {
-  border-color: #DC143C;
+  border-color: #003d7a;
   box-shadow: 0 0 0 3px rgba(220, 20, 60, 0.15);
 }
 
 .input-icon {
   width: 20px;
   height: 20px;
-  color: #DC143C;
+  color: #003d7a;
   flex-shrink: 0;
 }
 
@@ -305,7 +433,7 @@
   justify-content: center;
   gap: 8px;
   padding: 14px 28px;
-  background: linear-gradient(135deg, #DC143C 0%, #E31C1C 100%);
+  background: linear-gradient(135deg, #003d7a 0%, #003d7a 100%);
   color: #FFFFFF;
   border: none;
   border-radius: 10px;
@@ -390,7 +518,7 @@
   gap: 10px;
   padding: 14px 32px;
   background: #FFFFFF;
-  color: #DC143C;
+  color: #003d7a;
   border: none;
   border-radius: 10px;
   font-size: 15px;
@@ -443,7 +571,7 @@
   min-width: 90px;
   padding: 20px 24px;
   background: linear-gradient(135deg, rgba(220, 20, 60, 0.2) 0%, rgba(227, 28, 28, 0.15) 100%);
-  border: 2px solid #DC143C;
+  border: 2px solid #003d7a;
   border-radius: 12px;
   transition: all 0.3s ease;
   position: relative;
@@ -487,7 +615,7 @@
 .timer-value {
   font-size: 32px;
   font-weight: 800;
-  color: #DC143C;
+  color: #003d7a;
   line-height: 1;
   margin-bottom: 6px;
   text-shadow: 0 2px 8px rgba(220, 20, 60, 0.3);
@@ -503,7 +631,7 @@
 
 .timer-divider {
   font-size: 24px;
-  color: #DC143C;
+  color: #003d7a;
   font-weight: 700;
   opacity: 0.5;
 }
@@ -561,7 +689,169 @@
   animation: fade-in 0.8s ease-out forwards;
 }
 
+/* ===== CALL US BOOKING SECTION ===== */
+.hotels-call-booking {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 40px 20px;
+}
+.call-section{
+  text-align: center;
+}
+.call-us-section {
+  display: grid;
+  grid-template-columns: 1fr ;
+  gap: 32px;
+  align-items: center;
+  margin-inline: auto;
+  margin-bottom: 48px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.call-card {
+  background: rgba(48, 31, 34, 0.4);
+  border: 1.5px solid rgba(220, 20, 60, 0.3);
+  border-radius: 16px;
+  padding: 40px;
+  margin-left: auto;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.call-card:hover {
+  background: rgba(48, 31, 34, 0.6);
+  border-color: #003d7a;
+  box-shadow: 0 16px 48px rgba(220, 20, 60, 0.2);
+  transform: translateY(-8px);
+}
+
+.call-card-content h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0 0 12px;
+  line-height: 1.3;
+}
+
+.call-card-content p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0 0 24px;
+}
+
+.call-us-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, #003d7a 0%, #003d7a 100%);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  margin-bottom: 24px;
+  box-shadow: 0 8px 24px rgba(220, 20, 60, 0.4);
+  width: 100%;
+  text-align: left;
+}
+
+.call-us-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(220, 20, 60, 0.6);
+  background: linear-gradient(135deg, #003d7a 0%, #003d7a 100%);
+}
+
+.call-us-btn div {
+  display: flex;
+  flex-direction: column;
+}
+
+.call-label {
+  font-size: 12px;
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.call-number {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.call-benefits {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.benefit {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.benefit svg {
+  color: #3dd9c1;
+  flex-shrink: 0;
+}
+
+.contact-info-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.info-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(220, 20, 60, 0.3);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.info-card:hover {
+  background: rgba(220, 20, 60, 0.15);
+  border-color: #003d7a;
+  transform: translateY(-4px);
+}
+
+.info-card svg {
+  color: #003d7a;
+  margin-bottom: 12px;
+}
+
+.info-card h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0 0 8px;
+}
+
+.info-card p {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  line-height: 1.6;
+}
+
 /* Responsive */
+
 @media (max-width: 768px) {
   .hotels-coming-soon {
     padding: 30px 20px;
@@ -602,6 +892,20 @@
   .notify-form {
     flex-direction: column;
     gap: 12px;
+  }
+
+  .call-us-section {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .contact-info-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .call-card {
+    padding: 30px;
+
   }
 
   .notify-btn {
@@ -747,5 +1051,30 @@
 
   .coming-soon-footer {
     font-size: 12px;
+  }
+
+  .call-us-section {
+    gap: 16px;
+  }
+
+  .call-card {
+    padding: 20px;
+  }
+
+  .call-card-content h3 {
+    font-size: 18px;
+  }
+
+  .contact-info-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .info-card {
+    padding: 16px;
+  }
+
+  .call-us-btn {
+    padding: 14px 16px;
+    font-size: 14px;
   }
 }

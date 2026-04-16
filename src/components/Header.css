@@ -50,7 +50,7 @@
 
 .logo-link:hover {
   transform: scale(1.05) translateZ(0);
-  filter: drop-shadow(0 4px 12px rgba(220, 20, 60, 0.4));
+  filter: drop-shadow(0 4px 12px rgba(0, 61, 122, 0.4));
 }
 
 /* ===============================
@@ -100,7 +100,7 @@
   left: 0;
   width: 0;
   height: 3px;
-  background: linear-gradient(90deg, #DC143C 0%, #E31C1C 100%);
+  background: linear-gradient(90deg, #003d7a 0%, #001a4d 100%);
   border-radius: 2px 2px 0 0;
   transition: width 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
@@ -109,7 +109,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(220, 20, 60, 0.1) 0%, rgba(227, 28, 28, 0.05) 100%);
+  background: linear-gradient(135deg, rgba(0, 61, 122, 0.1) 0%, rgba(0, 61, 122, 0.05) 100%);
   border-radius: 8px;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -117,7 +117,7 @@
 }
 
 .nav-link:hover {
-  color: #DC143C;
+  color: #003d7a;
   transform: translateY(-2px);
 }
 
@@ -131,7 +131,7 @@
 
 .nav-link:hover .nav-icon {
   opacity: 1;
-  color: #DC143C;
+  color: #003d7a;
   transform: translateY(-2px);
 }
 
@@ -150,7 +150,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  background: linear-gradient(135deg, #DC143C 0%, #E31C1C 100%);
+  background: linear-gradient(135deg, #4169e1 0%, #9a2121 100%);
   color: white;
   padding: 11px 22px;
   border-radius: 10px;
@@ -160,10 +160,11 @@
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   border: none;
-  box-shadow: 0 8px 24px rgba(220, 20, 60, 0.4);
+  box-shadow: 0 8px 24px rgba(0, 61, 122, 0.4);
   white-space: nowrap;
   position: relative;
   overflow: hidden;
+  animation: callButtonPulse 2s ease-in-out infinite, callButtonGlow 2s ease-in-out infinite;
 }
 
 .call-btn-modern::before {
@@ -183,8 +184,8 @@
 
 .call-btn-modern:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 32px rgba(220, 20, 60, 0.5);
-  background: linear-gradient(135deg, #E31C1C 0%, #8B0000 100%);
+  /* box-shadow: 0 12px 32px rgba(220, 20, 60, 0.5); */
+  background: linear-gradient(135deg, #4169e1 0%, #9a2121 100%);
 }
 
 .call-btn-modern:active {
@@ -195,7 +196,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: slideInRight 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation: slideInRight 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), callIconBounce 1.5s ease-in-out infinite;
 }
 
 @keyframes slideInRight {
@@ -209,6 +210,25 @@
   }
 }
 
+@keyframes callButtonPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+
+@keyframes callIconBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
 /* ===============================
    MOBILE MENU TOGGLE
    =============================== */
@@ -217,7 +237,7 @@
   display: none;
   background: none;
   border: none;
-  color: #DC143C;
+  color: #003d7a;
   cursor: pointer;
   padding: 8px;
   transition: all 0.3s ease;
@@ -248,7 +268,7 @@
   height: 4px;
   margin-bottom: 2px;
   z-index: 1000;
-  background: #DC143C;
+  background: #003d7a;
   border-radius: 2px;
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   transform-origin: center;
@@ -394,15 +414,15 @@
 
   .nav-link:hover {
     background: rgba(220, 20, 60, 0.08);
-    border-left-color: #DC143C;
+    border-left-color: #003d7a;
     padding-left: 26px;
-    color: #DC143C;
+    color: #003d7a;
     transform: none;
   }
 
   .nav-link:active {
-    background: rgba(220, 20, 60, 0.15);
-    color: #DC143C;
+    background: rgba(0, 61, 122, 0.15);
+    color: #003d7a;
   }
 
   .header-right {
@@ -466,16 +486,16 @@
 }
 
 .nav::-webkit-scrollbar-track {
-  background: rgba(220, 20, 60, 0.05);
+  background: rgba(0, 61, 122, 0.05);
 }
 
 .nav::-webkit-scrollbar-thumb {
-  background: rgba(220, 20, 60, 0.3);
+  background: rgba(0, 61, 122, 0.3);
   border-radius: 2px;
 }
 
 .nav::-webkit-scrollbar-thumb:hover {
-  background: rgba(220, 20, 60, 0.5);
+  background: rgba(0, 61, 122, 0.5);
 }
 
 /* ===============================

@@ -23,7 +23,7 @@
   position: absolute;
   top: 15px;
   right: 15px;
-  background: #DC143C;
+  background: #003d7a;
   color: white;
   padding: 8px 15px;
   border-radius: 20px;
@@ -41,7 +41,7 @@
 }
 
 .card-location {
-  color: #DC143C;
+  color: #003d7a;
   font-size: 14px;
   margin-bottom: 10px;
 }
@@ -68,7 +68,7 @@
 }
 
 .book-btn {
-  background: linear-gradient(135deg, #DC143C 0%, #E31C1C 100%);
+  background: linear-gradient(135deg, #003d7a 0%, #001a4d 100%);
   color: white;
   border: none;
   padding: 8px 20px;

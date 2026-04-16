@@ -4,6 +4,7 @@ import './LegalPage.css';
 
 function Privacy() {
   const { contactSettings } = useContact();
+  console.log("contact",contactSettings);
   return (
     <div className="legal-page">
       <div className="legal-hero">
@@ -87,7 +88,7 @@ function Privacy() {
               <li>Object to certain data processing activities</li>
               <li>Request data portability</li>
             </ul>
-            <p>To exercise these rights, contact us at privacy@travelofareinfo.com</p>
+            <p>To exercise these rights, contact us at {contactSettings.email}</p>
           </section>
 
           <section>
@@ -109,9 +110,9 @@ function Privacy() {
             <h2>10. Contact Us</h2>
             <p>For privacy-related questions or concerns:</p>
             <ul>
-              <li>Email: privacy@travelofareinfo.com</li>
+              <li>Email: {contactSettings.email}</li>
               <li>Phone: {contactSettings.tfn}</li>
-              <li>Mail: Privacy Department, travelofareinfo.com</li>
+              <li>Address: {contactSettings.address}</li>
             </ul>
           </section>
         </div>
