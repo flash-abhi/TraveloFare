@@ -13,46 +13,47 @@ import HomeNew from './pages/HomeNew';
 import Flights from './pages/Flights';
 import Booking from './pages/Booking';
 import FlightOrder from './pages/FlightOrder';
-import FlightResults from './pages/FlightResults';
-import BookingConfirmation from './pages/BookingConfirmation';
-import Hotels from './pages/Hotels';
-import HotelResults from './pages/HotelResults';
-import HotelDetails from './pages/HotelDetails';
-import AirlinesDirectory from './pages/AirlinesDirectory';
-import AirlinePage from './pages/AirlinePage';
-import AirlineSupport from './pages/AirlineSupport';
-import AirlineCustomerServiceNumber from './pages/AirlineCustomerServiceNumber';
-import About from './pages/About';
-import Privacy from './pages/Privacy';
-import Terms from './pages/Terms';
-import FAQ from './pages/FAQ';
-import Help from './pages/Help';
-import Contact from './pages/Contact';
-import AdminLogin from './pages/AdminLogin';
-import AdminDashboard from './pages/AdminDashboard';
-import ForgotPassword from './pages/ForgotPassword';
-import ResetPassword from './pages/ResetPassword';
-import BlogPost from './pages/BlogPost';
-import Blog from './pages/Blog';
+import FlightOrders from "./pages/FlightOrders";
+import FlightResults from "./pages/FlightResults";
+import BookingConfirmation from "./pages/BookingConfirmation";
+import Hotels from "./pages/Hotels";
+import HotelResults from "./pages/HotelResults";
+import HotelDetails from "./pages/HotelDetails";
+import AirlinesDirectory from "./pages/AirlinesDirectory";
+import AirlinePage from "./pages/AirlinePage";
+import AirlineSupport from "./pages/AirlineSupport";
+import AirlineCustomerServiceNumber from "./pages/AirlineCustomerServiceNumber";
+import About from "./pages/About";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
+import FAQ from "./pages/FAQ";
+import Help from "./pages/Help";
+import Contact from "./pages/Contact";
+import AdminLogin from "./pages/AdminLogin";
+import AdminDashboard from "./pages/AdminDashboard";
+import ForgotPassword from "./pages/ForgotPassword";
+import ResetPassword from "./pages/ResetPassword";
+import BlogPost from "./pages/BlogPost";
+import Blog from "./pages/Blog";
 // import AirlineLogos from './components/AirlineLogos';
-import './App.css';
+import "./App.css";
 
 let socket = null;
 
 function AppContent() {
   const location = useLocation();
-  const isAdminRoute = location.pathname.startsWith('/admin');
+  const isAdminRoute = location.pathname.startsWith("/admin");
 
   useEffect(() => {
     // Connect to WebSocket for visitor tracking (only for non-admin pages)
     if (!isAdminRoute && !socket) {
       socket = io(SOCKET_URL);
-      console.log('🔌 Connected to visitor tracking');
+      console.log("🔌 Connected to visitor tracking");
     }
 
     // Track page view
     if (!isAdminRoute && socket) {
-      socket.emit('pageView', { page: location.pathname });
+      socket.emit("pageView", { page: location.pathname });
     }
 
     // Cleanup on unmount (app close)
@@ -79,6 +80,7 @@ function AppContent() {
         <Route path="/flights" element={<Flights />} />
         <Route path="/flight-results" element={<FlightResults />} />
         <Route path="/flight-order" element={<FlightOrder />} />
+        <Route path="/flight-orders" element={<FlightOrders />} />
         <Route path="/booking-confirmation" element={<BookingConfirmation />} />
         <Route path="/booking" element={<Booking />} />
         <Route path="/hotels" element={<Hotels />} />

@@ -292,11 +292,6 @@ function FlightOrder() {
             </div>
           </div>
 
-          {/* Time remaining banner */}
-          <div className="time-banner">
-            <Timer size={16} />
-            <span>Your selected fare is held for <strong>15:00</strong> minutes</span>
-          </div>
         </div>
       </div>
 
@@ -700,7 +695,7 @@ function FlightOrder() {
             </div>
           </div>
 
-          <aside className="order-summary">
+          <aside className="order-summaryy">
             {/* Flight Summary Card */}
             <div className="summary-card flight-card">
               <div className="summary-header">
@@ -802,7 +797,7 @@ function FlightOrder() {
             </div>
 
             {/* Price Card */}
-            <div className="summary-card price-card">
+            <div className="price-container">
               <div className="summary-header">
                 <Sparkles size={20} />
                 <h3>Price Summary</h3>

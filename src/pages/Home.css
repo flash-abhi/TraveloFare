@@ -10,12 +10,12 @@
 .home {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   min-height: 100vh;
-  background: linear-gradient(180deg, #0a1929 0%, #1e3a5f 100%);
+  background: linear-gradient(135deg, #fce4e4 0%, #f5d4d4 100%);
 }
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(180deg, #0a1929 0%, #1e3a5f 100%);
+  background: linear-gradient(135deg, #fce4e4 0%, #f5d4d4 100%);
   padding: 80px 20px 160px;
   text-align: center;
   color: white;

@@ -39,16 +39,25 @@ function HotelResults() {
         roomQuantity: searchParams.roomQuantity.toString()
       });
 
+      console.log('🔍 Fetching hotels with params:', Object.fromEntries(queryParams));
+      
       const response = await fetch(`/api/hotels?${queryParams}`);
       const data = await response.json();
 
-      if (data.success) {
+      console.log('📊 API Response:', data);
+
+      if (data.success && data.data) {
+        console.log(`✅ Received ${data.data.length} hotels from API`);
         setHotels(data.data);
       } else {
-        setError(data.message || 'Failed to fetch hotels');
+        const errorMsg = data.message || data.error || 'Failed to fetch hotels';
+        console.error('❌ API Error:', errorMsg);
+        setError(errorMsg);
       }
     } catch (err) {
-      setError('Error connecting to server: ' + err.message);
+      const errorMsg = 'Error connecting to server: ' + err.message;
+      console.error('❌ Network Error:', err);
+      setError(errorMsg);
     } finally {
       setLoading(false);
     }

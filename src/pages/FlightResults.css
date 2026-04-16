@@ -1796,6 +1796,9 @@
   gap: 20px;
   position: relative;
   z-index: 1;
+  width: 100%;
+  max-width: 100%;
+  flex-wrap: nowrap;
 }
 
 .cta-icon {
@@ -1819,7 +1822,9 @@
 }
 
 .cta-text {
-  flex: 1;
+  flex: 0 1 auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .cta-text h3 {
@@ -1846,7 +1851,9 @@
   font-weight: 700;
   text-decoration: none;
   transition: all 0.2s ease;
-  flex-shrink: 0;
+  flex-shrink: 1;
+  word-wrap: break-word;
+  white-space: normal;
 }
 
 .cta-phone-btn:hover {
@@ -1903,9 +1910,12 @@
   
   .cta-phone-btn {
     width: 100%;
+    max-width: 100%;
     justify-content: center;
     padding: 12px 20px;
     font-size: 15px;
+    flex-shrink: 1;
+    word-wrap: break-word;
   }
   
   .cta-features {
@@ -3085,6 +3095,8 @@
   z-index: 1000;
   padding: 16px 0;
   animation: slideUp 0.3s ease;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .selection-bar-content {
@@ -3141,6 +3153,10 @@
   display: flex;
   align-items: center;
   gap: 24px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  margin-right: 400px;
+  max-width: 500px;
 }
 
 .total-amount {
@@ -3169,10 +3185,12 @@
   font-weight: 600;
   cursor: pointer;
   transition: var(--transition);
-  white-space: nowrap;
+  white-space: normal;
   display: flex;
   align-items: center;
   gap: 8px;
+  flex-shrink: 1;
+  min-width: 120px;
 }
 
 .checkout-btn:hover {
@@ -3346,6 +3364,8 @@
     flex: 1;
     min-height: 48px;
     font-size: 16px;
+    max-width: 150px;
+    margin-right: 70px;
   }
 
   /* Flight Card Mobile */
@@ -4299,12 +4319,15 @@
 
   .cta-phone-btn {
     width: 100%;
+    max-width: 100%;
     justify-content: center;
     padding: 12px 16px;
     font-size: 14px;
     border-radius: 25px;
+    flex-shrink: 1;
+    word-wrap: break-word;
   }
-
+  
   .cta-features {
     flex-wrap: wrap;
     justify-content: center;
@@ -4537,11 +4560,15 @@
     justify-content: center;
     font-size: 13px;
     border-radius: 20px;
+    flex-shrink: 1;
+    min-width: unset;
+    white-space: normal;
   }
 
   .checkout-btn.book-now {
     padding: 8px 14px;
     font-size: 13px;
+    white-space: normal;
   }
 }
 
@@ -4581,5 +4608,7 @@
   .cta-phone-btn {
     font-size: 13px;
     padding: 10px 14px;
+    flex-shrink: 1;
+    word-wrap: break-word;
   }
 }
