@@ -8,40 +8,134 @@ import {
 } from 'lucide-react';
 import { useContact } from '../context/ContactContext';
 import AirportAutocomplete from '../components/AirportAutocomplete';
-import './HomeNew.css';
+import "./HomeNew.css";
 
 function HomeNew() {
   const navigate = useNavigate();
   const { contactSettings } = useContact();
   const statsRef = useRef(null);
   const [statsVisible, setStatsVisible] = useState(false);
-  
-  const [activeTab, setActiveTab] = useState('flights');
-  const [tripType, setTripType] = useState('roundtrip');
+
+  const [activeTab, setActiveTab] = useState("flights");
+  const [tripType, setTripType] = useState("roundtrip");
   const [searchData, setSearchData] = useState({
-    from: '',
-    to: '',
-    departDate: '',
-    returnDate: '',
+    from: "",
+    to: "",
+    departDate: "",
+    returnDate: "",
     passengers: { adults: 1, children: 0, infants: 0 },
-    cabinClass: 'economy'
+    cabinClass: "economy",
   });
   const [showPassengers, setShowPassengers] = useState(false);
 
   const popularRoutes = [
-    { from: 'New York', fromCode: 'JFK', to: 'London', toCode: 'LHR', price: 389, airline: 'Multiple Airlines', image: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=400&h=250&fit=crop' },
-    { from: 'Los Angeles', fromCode: 'LAX', to: 'Tokyo', toCode: 'NRT', price: 549, airline: 'Multiple Airlines', image: 'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&h=250&fit=crop' },
-    { from: 'Chicago', fromCode: 'ORD', to: 'Paris', toCode: 'CDG', price: 429, airline: 'Multiple Airlines', image: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=400&h=250&fit=crop' },
-    { from: 'Miami', fromCode: 'MIA', to: 'Dubai', toCode: 'DXB', price: 619, airline: 'Multiple Airlines', image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=250&fit=crop' },
-    { from: 'San Francisco', fromCode: 'SFO', to: 'Singapore', toCode: 'SIN', price: 499, airline: 'Multiple Airlines', image: 'https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=400&h=250&fit=crop' },
-    { from: 'Dallas', fromCode: 'DFW', to: 'Cancun', toCode: 'CUN', price: 219, airline: 'Multiple Airlines', image: 'https://images.unsplash.com/photo-1510097467424-192d713fd8b2?w=400&h=250&fit=crop' },
+    {
+      from: "New York",
+      fromCode: "JFK",
+      to: "London",
+      toCode: "LHR",
+      price: 389,
+      airline: "Multiple Airlines",
+      image:
+        "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=400&h=250&fit=crop",
+    },
+    {
+      from: "Los Angeles",
+      fromCode: "LAX",
+      to: "Tokyo",
+      toCode: "NRT",
+      price: 549,
+      airline: "Multiple Airlines",
+      image:
+        "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&h=250&fit=crop",
+    },
+    {
+      from: "Chicago",
+      fromCode: "ORD",
+      to: "Paris",
+      toCode: "CDG",
+      price: 429,
+      airline: "Multiple Airlines",
+      image:
+        "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=400&h=250&fit=crop",
+    },
+    {
+      from: "Miami",
+      fromCode: "MIA",
+      to: "Dubai",
+      toCode: "DXB",
+      price: 619,
+      airline: "Multiple Airlines",
+      image:
+        "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=250&fit=crop",
+    },
+    {
+      from: "San Francisco",
+      fromCode: "SFO",
+      to: "Singapore",
+      toCode: "SIN",
+      price: 499,
+      airline: "Multiple Airlines",
+      image:
+        "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=400&h=250&fit=crop",
+    },
+    {
+      from: "Dallas",
+      fromCode: "DFW",
+      to: "Cancun",
+      toCode: "CUN",
+      price: 219,
+      airline: "Multiple Airlines",
+      image:
+        "https://images.unsplash.com/photo-1510097467424-192d713fd8b2?w=400&h=250&fit=crop",
+    },
   ];
 
   const exclusiveDeals = [
-    { destination: 'Bali, Indonesia', tagline: 'Tropical Escape', price: 849, originalPrice: 1199, image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&h=400&fit=crop', rating: 4.9, reviews: 2840, badge: 'Best Seller' },
-    { destination: 'Santorini, Greece', tagline: 'Mediterranean Dream', price: 729, originalPrice: 1049, image: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=600&h=400&fit=crop', rating: 4.8, reviews: 1920, badge: 'Hot Deal' },
-    { destination: 'Maldives', tagline: 'Paradise Found', price: 1199, originalPrice: 1799, image: 'https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=600&h=400&fit=crop', rating: 4.9, reviews: 3150, badge: 'Premium' },
-    { destination: 'Swiss Alps', tagline: 'Mountain Adventure', price: 679, originalPrice: 999, image: 'https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=600&h=400&fit=crop', rating: 4.7, reviews: 1680, badge: 'New' },
+    {
+      destination: "Bali, Indonesia",
+      tagline: "Tropical Escape",
+      price: 849,
+      originalPrice: 1199,
+      image:
+        "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&h=400&fit=crop",
+      rating: 4.9,
+      reviews: 2840,
+      badge: "Best Seller",
+    },
+    {
+      destination: "Santorini, Greece",
+      tagline: "Mediterranean Dream",
+      price: 729,
+      originalPrice: 1049,
+      image:
+        "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=600&h=400&fit=crop",
+      rating: 4.8,
+      reviews: 1920,
+      badge: "Hot Deal",
+    },
+    {
+      destination: "Maldives",
+      tagline: "Paradise Found",
+      price: 1199,
+      originalPrice: 1799,
+      image:
+        "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=600&h=400&fit=crop",
+      rating: 4.9,
+      reviews: 3150,
+      badge: "Premium",
+    },
+    {
+      destination: "Swiss Alps",
+      tagline: "Mountain Adventure",
+      price: 679,
+      originalPrice: 999,
+      image:
+        "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=600&h=400&fit=crop",
+      rating: 4.7,
+      reviews: 1680,
+      badge: "New",
+    },
   ];
 
   const testimonials = [
@@ -172,24 +266,16 @@ function HomeNew() {
   return (
     <div className="home-new">
       {/* ===== HERO SECTION ===== */}
-      <section className="hero-section">
-        <div className="hero-bg">
-          <div className="hero-bg-image"></div>
-          <div className="hero-gradient-overlay"></div>
-          <div className="hero-particles">
-            {[...Array(20)].map((_, i) => (
-              <div key={i} className={`particle particle-${i + 1}`}></div>
-            ))}
-          </div>
-          <div className="hero-flights">
-            <div className="flight-plane flight-plane-1">✈️</div>
-            <div className="flight-plane flight-plane-2">✈️</div>
-            <div className="flight-plane flight-plane-3">✈️</div>
-            <div className="flight-plane flight-plane-4">✈️</div>
-            <div className="flight-plane flight-plane-5">✈️</div>
-          </div>
-        </div>
-
+      <section
+        className="hero"
+        style={{
+          backgroundImage: "url('/HeroImage.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+        }}
+      >
+      <div className='overlay'>
         <div className="hero-inner container">
           <div className="hero-left">
             <div className="hero-badge scroll-animate">
@@ -418,9 +504,7 @@ function HomeNew() {
                       />
                     </div>
                     <div className="search-field">
-                      <label>
-                       Check-in
-                      </label>
+                      <label>Check-in</label>
                       <input
                         type="date"
                         value={searchData.departDate}
@@ -434,9 +518,7 @@ function HomeNew() {
                       />
                     </div>
                     <div className="search-field">
-                      <label>
-                        Check-out
-                      </label>
+                      <label>Check-out</label>
                       <input
                         type="date"
                         value={searchData.returnDate}
@@ -543,6 +625,7 @@ function HomeNew() {
               </div>
             </div>
           </div>
+        </div>
         </div>
       </section>
 
