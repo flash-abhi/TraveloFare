@@ -73,9 +73,9 @@
 }
 
 .social-link:hover {
-  background: #003d7a;
+  background: #1f7ad6;
   color: #FFFFFF;
-  border-color: #003d7a;
+  border-color: #1f7ad6;
   transform: translateY(-4px);
   box-shadow: 0 6px 16px rgba(0, 61, 122, 0.2);
 }
@@ -108,7 +108,7 @@
 }
 
 .footer-links li a:hover {
-  color: #003d7a;
+  color: #1f7ad6;
   opacity: 1;
   transform: translateX(4px);
 }
@@ -132,7 +132,7 @@
 .footer-contact-list li svg {
   flex-shrink: 0;
   margin-top: 2px;
-  color: #003d7a;
+  color: #1f7ad6;
   stroke-width: 2.5;
 }
 
@@ -151,7 +151,7 @@
 }
 
 .contact-link:hover {
-  color: #003d7a;
+  color: #1f7ad6;
 }
 
 .contact-text {
@@ -216,7 +216,7 @@
 }
 
 .newsletter-input:focus {
-  border-color: #003d7a;
+  border-color: #1f7ad6;
   background: #FFFFFF;
   color: #000000;
   box-shadow: 0 0 0 3px rgba(0, 61, 122, 0.08);
@@ -224,7 +224,7 @@
 
 .newsletter-button {
   padding: 12px 28px;
-  background: #003d7a;
+  background: #1f7ad6;
   color: white;
   border: none;
   border-radius: 8px;
@@ -236,7 +236,7 @@
 }
 
 .newsletter-button:hover {
-  background: #003d7a;
+  background: #1f7ad6;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 61, 122, 0.3);
 }
@@ -306,14 +306,14 @@
 }
 
 .copyright-legal a {
-  color: #003d7a;
+  color: #2182e4;
   text-decoration: none;
   transition: color 0.3s;
   font-weight: 500;
 }
 
 .copyright-legal a:hover {
-  color: #003d7a;
+  color: #1f7ad6;
 }
 
 /* Responsive Design */
