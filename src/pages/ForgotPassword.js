@@ -104,7 +104,7 @@ function ForgotPassword() {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="info@flyairlinebooking.com"
+              placeholder="info@travelofareinfo.com"
               required
               disabled={isLoading}
             />

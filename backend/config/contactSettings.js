@@ -2,10 +2,9 @@
  * Contact Settings Module
  * Centralized contact information that can be updated via Admin Panel
  */
-
 let contactSettings = {
   tfn: '+1-888-859-0441',
-  email: 'support@flyairlinebooking.com',
+  email: 'info@travelofareinfo.com',
   address: '1309 Coffeen Ave STE 1200, Sheridan, WY 82801, USA',
   workingHours: 'Mon-Sun 24/7'
 };
