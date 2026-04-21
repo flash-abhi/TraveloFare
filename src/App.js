@@ -117,8 +117,21 @@ function AppContent() {
     </div>
   );
 }
+function usePageTracking() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (window.gtag) {
+      window.gtag('config', 'AW-18098841183', {
+        page_path: location.pathname,
+      });
+    }
+  }, [location]);
+}
+
 
 function App() {
+  usePageTracking();
   return (
     <Router>
       <ContactProvider>
