@@ -35,6 +35,7 @@ import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
 import BlogPost from "./pages/BlogPost";
 import Blog from "./pages/Blog";
+// import AirlineLogos from './components/AirlineLogos';
 import "./App.css";
 import AirlinesNew from './pages/AirlinesNew';
 import AirlinePageNew from './pages/AirlinePageNew';
@@ -111,25 +112,13 @@ function AppContent() {
       </Routes>
       {!isAdminRoute && <StickyCallButton />}
       {!isAdminRoute && <FloatingCallBanner />}
+      {/* {!isAdminRoute && <AirlineLogos />} */}
       {!isAdminRoute && <Footer />}
     </div>
   );
 }
-function usePageTracking() {
-  const location = useLocation();
-
-  useEffect(() => {
-    if (window.gtag) {
-      window.gtag('config', 'AW-18098841183', {
-        page_path: location.pathname,
-      });
-    }
-  }, [location]);
-}
-
 
 function App() {
-  usePageTracking();
   return (
     <Router>
       <ContactProvider>
@@ -140,3 +129,6 @@ function App() {
 }
 
 export default App;
+
+
+// linear-gradient(135deg, #4169e1 0%, #9a2121 100%);
