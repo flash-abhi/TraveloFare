@@ -669,6 +669,7 @@ function HomeNew() {
               <a
                 href={`tel:${(contactSettings.tfn || "+1-888-859-0441").replace(/[^0-9+]/g, "")}`}
                 className="call-banner-btn"
+                onclick="return gtag_report_call_conversion('tel:+18665608871');"
               >
                 <PhoneCall size={20} />
                 <div>

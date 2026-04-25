@@ -92,6 +92,7 @@ function Header() {
             href={`tel:${contactSettings.tfn.replace(/[^0-9+]/g, "")}`}
             className="call-btn-modern"
             title="Click to call"
+            onclick="return gtag_report_call_conversion('tel:+18665608871');"
           >
             <span className="call-icon">
               <Phone size={20} />
