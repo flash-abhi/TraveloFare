@@ -4496,6 +4496,8 @@
 @media (max-width: 768px) {
   .selection-bar {
     padding: 8px 10px 12px;
+    bottom: 86px;
+    padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
   }
 
   .selection-bar-content {
@@ -4563,12 +4565,20 @@
     flex-shrink: 1;
     min-width: unset;
     white-space: normal;
+    margin-right: 0;
   }
 
   .checkout-btn.book-now {
     padding: 8px 14px;
     font-size: 13px;
     white-space: normal;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .selection-bar {
+    bottom: 96px;
   }
 }
 
